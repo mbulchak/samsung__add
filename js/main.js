@@ -73,8 +73,6 @@ gsap.to(".second__part", {
   backgroundRepeat: "no-repeat",
   backgroundPositionY: "80%",
   backgroundPositionX: "80%",
-  // backgroundPositionX: "0%",
-  // backgroundPositionY: "center",
 });
 
 gsap.to(".second__part", {
