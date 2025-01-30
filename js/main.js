@@ -13,7 +13,6 @@ gsap.to(".logo__main", {
   duration: 1,
   delay: 0.5,
   opacity: 1,
-
 });
 
 gsap.to(".logo__main", {
@@ -81,25 +80,25 @@ gsap.to(".second__part", {
 gsap.to(".second__part", {
   delay: 8.3,
   duration: 0,
-  backgroundImage: "url(./../images/frame__2.png)"
-})
+  backgroundImage: "url(./../images/frame__2.png)",
+});
 
 gsap.to(".second__part", {
   delay: 11.3,
   duration: 0,
-  backgroundImage: "url(./../images/frame__3.png)"
-})
+  backgroundImage: "url(./../images/frame__3.png)",
+});
 
 gsap.to(".second__part", {
   delay: 14.3,
   duration: 0,
-  backgroundImage: "url(./../images/frame__4.jpg)"
-})
+  backgroundImage: "url(./../images/frame__4.jpg)",
+});
 gsap.to(".second__part", {
   delay: 17.3,
   duration: 0,
-  backgroundImage: "url(./../images/frame__5.png)"
-})
+  backgroundImage: "url(./../images/frame__5.png)",
+});
 
 gsap.set(".description ", {
   opacity: 0,
@@ -115,53 +114,10 @@ gsap.registerPlugin(TextPlugin);
 
 var tl = gsap.timeline();
 
-// tl.to(".description__main", {
-//   dalay: 11.3,
-//   x: 10,
-//   text: 'Hi hi hihihhihihihihiihi'
-// })
-// tl.set(".description__main", {x: 10})
-
-// gsap.to(".description__main", {
-//   delay: 5.3,
-//   duration: 2,
-// x: 0,
-// text: "“The first time I used the Samsung Bespoke Jet™, I cried. I’m not being sensational; I really did. Of course, this vacuum worked great. But that’s not all.”",
-// })
-
-//dfd
-// gsap.to(".description__main", {
-//   delay: 8.3,
-//   x: 0,
-// });
-
-// gsap.to(".description__main", {
-//   delay: 8.3,
-//   duration: 2,
-//   text: "“If you’re an over-cleaner, like myself, you’ll nerd \n out on all of the functions. If you avoid this chore \n at all costs, you’ll appreciate how simple \n Samsung makes it.”",
-// });
-
-// gsap.to('.description__main', {
-//   x: 10,
-//   delay: 11.3,
-// })
-// gsap.to('.description__main', {
-//   x: 0,
-//   delay: 11.4,
-//   text: 'hdfadsjasdadsadsasda'
-// })
-
-/* gsap.to(".description__main", {
-  delay: 8.3,
-  duration: 2,
-  text: "“If you’re an over-cleaner, like myself, you’ll nerd \n out on all of the functions. If you avoid this chore \n at all costs, you’ll appreciate how simple \n Samsung makes it.”",
-
-}); */
-
 const descr = document.querySelector(".description__main");
 
 gsap.to(descr, {
-  duration: 1,
+  duration: 0,
   delay: 5.3,
   text: {
     value:
@@ -171,31 +127,23 @@ gsap.to(descr, {
 });
 
 gsap.to(descr, {
-  duration: 2,
+  x: 10,
+  duration: 1,
   delay: 8.3,
   text: {
     value:
       "“If you’re an over-cleaner, like myself, you’ll nerd \n out on all of the functions. If you avoid this chore \n at all costs, you’ll appreciate how simple \n Samsung makes it.”",
     delimiter: "  ",
+  },
+  onComplete: () => {
+    gsap.to(descr, {
+      x: 0,
+    });
   },
 });
 
-/* gsap.fromTo(descr, {
-  x: 10,
-  duration: 2,
-  delay: 8.3,
-  text: {
-    value:
-      "“If you’re an over-cleaner, like myself, you’ll nerd \n out on all of the functions. If you avoid this chore \n at all costs, you’ll appreciate how simple \n Samsung makes it.”",
-    delimiter: "  ",
-  },
-}, {
-  x: 0,
-}) */
-
-
 gsap.to(descr, {
-  // x: 0,
+  x: 10,
   duration: 1,
   delay: 11.3,
   text: {
@@ -203,9 +151,15 @@ gsap.to(descr, {
       "“Both the floor and pet hair attachments are cleverly designed to eliminate the dreaded hair wrap. (In other words, you’ll never have to tackle hair tangles with a pair of scissors again.)” ",
     delimiter: "  ",
   },
+  onComplete: () => {
+    gsap.to(descr, {
+      x: 0,
+    });
+  },
 });
 
 gsap.to(descr, {
+  x: 10,
   duration: 1,
   delay: 14.3,
   text: {
@@ -213,9 +167,15 @@ gsap.to(descr, {
       "“When I learned the Samsung Bespoke Vac cleaned itself with amazing technology, that’s when I cried. No more scraping spider legs and hair out of the crevices with my hands. Its suction power is so strong, the canister is left perfectly clean after every use. It’s like a vacuum for your vacuum.” ",
     delimiter: "  ",
   },
+  onComplete: () => {
+    gsap.to(descr, {
+      x: 0,
+    });
+  },
 });
 
 gsap.to(descr, {
+  x: 10,
   duration: 1,
   delay: 17.3,
   text: {
@@ -223,19 +183,26 @@ gsap.to(descr, {
       "“Because it’s so nice-looking, it can live right in the kitchen. No more hauling a vacuum up and down the basement stairs on the daily”",
     delimiter: "  ",
   },
+  onComplete: () => {
+    gsap.to(descr, {
+      x: 0,
+    });
+  },
 });
 
-gsap.set('.quote', {
+gsap.set(".quote", {
   marginBottom: 115,
-})
-gsap.to('.quote', {
+});
+
+gsap.to(".quote", {
   delay: 14.3,
   marginBottom: 90,
-})
-gsap.to('.quote', {
+});
+
+gsap.to(".quote", {
   delay: 17.3,
   marginBottom: 115,
-})
+});
 
 gsap.set(".count", {
   opacity: 0,
@@ -271,20 +238,45 @@ gsap.to(".arrow", {
   delay: 17.3,
 });
 
-// button__shop
+// button__shop and hover effect
 
-gsap.set(".button__shop", {
+const shop__button = document.querySelector(".button__shop");
+
+gsap.set(shop__button, {
   opacity: 0,
 });
 
-gsap.to(".button__shop", {
+gsap.to(shop__button, {
   opacity: 1,
   delay: 5.3,
   duration: 2,
 });
-gsap.to(".button__shop", {
+
+const shop__scale = gsap.to(shop__button, {
   duration: 1,
   scale: 1.1,
   repeat: "-1",
   yoyo: true,
+  paused: true,
+});
+
+shop__scale.play();
+
+shop__button.addEventListener("mouseenter", () => {
+  shop__scale.pause();
+
+  gsap.to(shop__button, {
+    scale: 1.3,
+    duration: 2,
+    ease: "power2.out"
+  });
+});
+shop__button.addEventListener("mouseout", () => {
+  gsap.to(shop__button, {
+    scale: 1,
+    ease: "power2.out",
+    duration: 2,
+  });
+
+  shop__scale.play();
 });
