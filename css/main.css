@@ -40,7 +40,7 @@ p {
 }
 
 .logo__main {
- margin-bottom: 25px;
+ margin-bottom: 23px;
 }
 
 .logo__samsung {
@@ -58,7 +58,7 @@ p {
 }
 
 .description {
-  margin-bottom: 33px;
+  margin-bottom: 30px;
   margin-left: 36px;
 }
 
@@ -68,10 +68,16 @@ p {
 }
 
 .count {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   margin-left: 36px;
 }
+.arrow-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
 
+}
 .arrow {
   font-size: 18px;
 }
