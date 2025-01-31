@@ -1,2 +1,2 @@
 # samsung_add
-- Creating animation app for Samsung using GSAP library
+- Creating animation addvertisement for Samsung using GSAP library
