@@ -254,11 +254,9 @@ arrTl.to(".arrow", {
 });
 
 arrowLeft.addEventListener('click', () => {
-  console.log('arrrrrrr')
   navigateContent(-1);
 })
 arrowRight.addEventListener('click', () => {
-  console.log('arrrrrrr453');
   navigateContent(1);
 })
 
